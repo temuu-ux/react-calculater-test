@@ -1,0 +1,8 @@
+.mainCalc {
+  width: 500px;
+  margin: auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
