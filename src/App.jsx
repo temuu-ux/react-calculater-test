@@ -55,15 +55,14 @@ export default function App() {
     }
 
     if (todoOp == "%") {
-      const result =
-        Number(prevScreen) / 100 + Number(currentScreen) / 100 + "";
+      const result = (Number(prevScreen) * Number(currentScreen)) / 100 + "";
 
       setCurrentScreen(result);
     }
     if (todoOp == ".") {
-      const result = Number(prevScreen) + "." + Number(currentScreen) + ".";
-
-      setCurrentScreen(result);
+      const result = Number(prevScreen) + ".";
+      const result1 = result + Number(currentScreen) + "";
+      setCurrentScreen(result1);
     }
   }
 

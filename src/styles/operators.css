@@ -1,3 +1,7 @@
+/* .operators {
+  display: flex;
+} */
+
 .operators button {
   background-color: yellow;
 }

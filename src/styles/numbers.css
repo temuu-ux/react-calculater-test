@@ -1,3 +1,10 @@
+/* .numbers {
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 180px;
+} */
+
 .numbers button {
   background-color: black;
   color: white;
