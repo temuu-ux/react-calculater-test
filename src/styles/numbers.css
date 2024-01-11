@@ -1,11 +1,12 @@
-/* .numbers {
-  width: 150px;
+.numbers {
+  width: 200px;
   display: flex;
   flex-wrap: wrap;
-  height: 180px;
-} */
+  margin-top: 4px;
+}
 
 .numbers button {
   background-color: black;
   color: white;
+  height: 50px;
 }

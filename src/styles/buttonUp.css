@@ -1,4 +1,6 @@
 .upperBtn {
+  display: flex;
+  max-height: 50px;
 }
 
 .upperBtn .btn {

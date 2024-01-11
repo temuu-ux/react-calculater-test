@@ -1,6 +1,9 @@
-/* .operators {
+.operators {
   display: flex;
-} */
+  flex-direction: column;
+  position: absolute;
+  right: 125px;
+}
 
 .operators button {
   background-color: yellow;

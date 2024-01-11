@@ -72,33 +72,36 @@ export default function App() {
   return (
     <div className="mainCalc">
       <Screen value={currentScreen} />
+
       <div className="buttons">
-        <div className="upperBtn">
-          {upperBtn.map((val, index) => {
-            return (
-              <ButtonUp key={index} value={val} changeTodoOp={changeTodoOp} />
-            );
-          })}
+        <div className="">
+          {" "}
+          <div className="upperBtn">
+            {upperBtn.map((val, index) => {
+              return (
+                <ButtonUp key={index} value={val} changeTodoOp={changeTodoOp} />
+              );
+            })}
+          </div>
+          <div className="numbers">
+            {numberButtons.map((val, index) => {
+              return (
+                <Button
+                  key={index}
+                  value={val}
+                  changeScreenVal={changeScreenVal}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className="numbers">
-          {numberButtons.map((val, index) => {
-            return (
-              <Button
-                key={index}
-                value={val}
-                changeScreenVal={changeScreenVal}
-              />
-            );
-          })}
-        </div>
-        <div className="operators">
+
+        <div className="operators ">
           {operatorButtons.map((val, index) => {
             return (
               <ButtonOp key={index} value={val} changeTodoOp={changeTodoOp} />
             );
           })}
-        </div>
-        <div>
           <button className="btn" onClick={equalHandler}>
             =
           </button>

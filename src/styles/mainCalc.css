@@ -1,8 +1,9 @@
 .mainCalc {
-  width: 500px;
+  width: 300px;
   margin: auto;
-  padding: 100px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border: solid black 1px;
 }
