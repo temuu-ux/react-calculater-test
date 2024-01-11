@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./components/Button";
 import ButtonOp from "./components/ButtonOp";
+import ButtonUp from "./components/ButtonUp";
 import Screen from "./components/Screen";
 import "./styles/global.css";
 import "./styles/button.css";
@@ -9,7 +10,7 @@ import "./styles/mainCalc.css";
 import "./styles/buttons.css";
 import "./styles/operators.css";
 import "./styles/numbers.css";
-import { numberButtons, operatorButtons } from "./utils/constants";
+import { upperBtn, numberButtons, operatorButtons } from "./utils/constants";
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState("");
@@ -26,6 +27,44 @@ export default function App() {
       const result = Number(prevScreen) + Number(currentScreen) + "";
       setCurrentScreen(result);
     }
+
+    if (todoOp == "-") {
+      const result = Number(prevScreen) - Number(currentScreen) + "";
+      setCurrentScreen(result);
+    }
+
+    if (todoOp == "*") {
+      const result = Number(prevScreen) * Number(currentScreen) + "";
+      setCurrentScreen(result);
+    }
+
+    if (todoOp == "/") {
+      const result = Number(prevScreen) / Number(currentScreen) + "";
+      setCurrentScreen(result);
+    }
+
+    if (todoOp == "AC") {
+      prevScreen("");
+      currentScreen("");
+      setCurrentScreen("");
+    }
+
+    if (todoOp == "+/-") {
+      const result = -1 * Number(prevScreen) + -1 * Number(currentScreen) + "";
+      setCurrentScreen(result);
+    }
+
+    if (todoOp == "%") {
+      const result =
+        Number(prevScreen) / 100 + Number(currentScreen) / 100 + "";
+
+      setCurrentScreen(result);
+    }
+    if (todoOp == ".") {
+      const result = Number(prevScreen) + "." + Number(currentScreen) + ".";
+
+      setCurrentScreen(result);
+    }
   }
 
   function changeScreenVal(val) {
@@ -35,6 +74,13 @@ export default function App() {
     <div className="mainCalc">
       <Screen value={currentScreen} />
       <div className="buttons">
+        <div className="upperBtn">
+          {upperBtn.map((val, index) => {
+            return (
+              <ButtonUp key={index} value={val} changeTodoOp={changeTodoOp} />
+            );
+          })}
+        </div>
         <div className="numbers">
           {numberButtons.map((val, index) => {
             return (
